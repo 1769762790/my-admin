@@ -1,0 +1,12 @@
+.dashboard-logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.dashboard-site-layout .dashboard-site-layout-background {
+  background: #fff;
+}
+  [data-theme="dark"] .dashboard-site-layout .dashboard-site-layout-background {
+    background: #141414;
+  }

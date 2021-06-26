@@ -1,0 +1,45 @@
+.tagsViews {
+  width: 100%;
+  background: #fff;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  &-item {
+    cursor: pointer;
+  }
+  .active:before {
+    content: "";
+    background: #fff;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 2px;
+  }
+  .anticon-close {
+      &:hover {
+        border-radius: 50%;
+        background-color: #b4bccc;
+        color: #fff; 
+      }
+  }
+}
+.contextMenu {
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  li {
+    padding: 5px 10px;
+    text-align: center;
+    &:hover {
+      background: #eee;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.layout {
+  .logo {
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    // background: rgba(23,39,57);
+    img {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+    }
+  }
+  .logo-fixed {
+    // position: fixed;
+    // width: 200px;
+    // margin-top: 0;
+    // z-index: 1;
+  }
+  .content-marginMax {
+    margin-left: 256px;
+  }
+  .content-marginMin {
+    margin-left: 80px;
+  }
+  &-right {
+    &--fixed {
+      box-sizing: border-box;
+      padding-top: 100px;
+    }
+    &--paddingMin {
+      padding-top: 64px;
+    }
+    &__content {
+      background: #fff;
+      padding: 0;
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 18px;
+      min-height: calc(100vh - 137px);
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+  &-nav {
+    // overflow: auto;
+    // height: 100%;
+    // position: fixed;
+    // left: 0;
+    // box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+
+    .ant-layout-sider-children {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 24px;
+      &-title {
+        animation: fade-in 0.3s;
+      }
+      h1 {
+        margin: 0 0 0 10px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .show-title {
+        display: block;
+      }
+      .hidden-title {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+button {
+  margin-right: 10px;
+}
+
+/* 第一次加载的时候 */
+.fade-appear {
+  opacity: 0;
+}
+/* 第一次入场的时候后到 第一次完成之前 */
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+/* 入场动画执行的第一个时刻 */
+.fade-enter {
+  opacity: 0;
+}
+/* 入场动画执行的第二个时刻 到 完成之前 */
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+/* 入场动画执行的完成时刻 */
+.fade-enter-done {
+  opacity: 1;
+}
+/* 出场动画开始第一个时刻 */
+.fade-exit {
+  opacity: 1;
+}
+/* 出场动画开始第二个时刻到完成时刻之前 */
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+/* 出场动画的完成时刻 */
+.fade-exit-done {
+  opacity: 0;
+}
